@@ -12,8 +12,11 @@
       <Button layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="152.0" text="Exit" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Button layoutX="37.0" layoutY="632.0" mnemonicParsing="false" onAction="#photoButton" text="Photo" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Button layoutX="20.0" layoutY="101.0" mnemonicParsing="false" onAction="#blackWhiteButton" text="Black White" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
-      <Button layoutX="20.0" layoutY="152.0" mnemonicParsing="false" onAction="#contourButton" text="Contour" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
-      <Slider fx:id="counterSlider" layoutX="20.0" layoutY="181.0" onMouseDragged="#counterChange" value="40.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
-      <Label layoutX="20.0" layoutY="179.0" text="Contour" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="177.0" />
+      <Button layoutX="20.0" layoutY="152.0" mnemonicParsing="false" onAction="#contourButton" text="Contour" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
+      <Slider fx:id="counterSlider" layoutX="20.0" layoutY="181.0" max="255.0" min="1.0" onMouseDragged="#counterChange" value="40.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0" />
+      <Label layoutX="20.0" layoutY="179.0" text="Contour" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="257.0" />
+      <Button layoutX="14.0" layoutY="143.0" mnemonicParsing="false" onAction="#gaussianBlurButton" text="GaussianBlur" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
+      <Label layoutX="20.0" layoutY="183.0" text="GaussianBlur" AnchorPane.topAnchor="177.0" />
+      <Slider fx:id="gaussianBlurSlider" layoutX="140.0" layoutY="179.0" max="10.0" onMouseDragged="#gaussianBlurChange" value="2.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
    </children>
 </AnchorPane>

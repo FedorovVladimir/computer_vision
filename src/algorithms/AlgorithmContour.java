@@ -8,7 +8,7 @@ public class AlgorithmContour implements Algorithm {
 
     @Override
     public void change(Mat frame) {
-        new AlgorithmBlackWhite().change(frame);
+        new AlgorithmGaussianBlur().change(frame);
         Mat dop = new Mat();
         frame.copyTo(dop);
         Imgproc.adaptiveThreshold(dop, frame, maxValue, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY,7, 5);
