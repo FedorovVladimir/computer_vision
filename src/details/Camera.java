@@ -6,7 +6,7 @@ import org.opencv.videoio.Videoio;
 class Camera extends VideoCapture {
 
     Camera(int index, int width, int height) {
-        super(0);
+        super(index);
         if (!isOpened()) {
             System.out.println("Camera is not open.");
             System.exit(1);

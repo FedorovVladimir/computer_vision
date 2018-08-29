@@ -2,26 +2,20 @@ package sample;
 
 import algorithms.AlgorithmLine;
 import algorithms.AlgorithmNone;
-import details.View;
+import details.CompositeViews;
 
 public class Controller {
-    public void noneButton() {
-        System.out.println("none");
 
-        String title = "Реальное изображение";
-        int width = 320;
-        int height = 240;
-        View view = new View(width, height, title, new AlgorithmNone());
-        view.start();
+    public void noneButton() {
+        CompositeViews.getInstance().setAlgorithm(new AlgorithmNone(), "AlgorithmNone");
     }
 
     public void lineButton() {
-        System.out.println("line");
-        String title = "Изображение с линиями";
-        int width = 320;
-        int height = 240;
-        View viewLine = new View(width, height, title, new AlgorithmLine());
-        viewLine.start();
+        CompositeViews.getInstance().setAlgorithm(new AlgorithmLine(), "AlgorithmLine");
+    }
+
+    public void photoButton() {
+        CompositeViews.getInstance().photo();
     }
 
     public void exitButton() {
