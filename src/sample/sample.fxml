@@ -9,5 +9,6 @@
       <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#lineButton" prefHeight="25.0" prefWidth="156.0" text="Line" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
       <Button layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="152.0" text="Exit" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Button layoutX="37.0" layoutY="632.0" mnemonicParsing="false" onAction="#photoButton" text="Photo" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="20.0" layoutY="101.0" mnemonicParsing="false" onAction="#blackWhiteButton" text="Black White" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
    </children>
 </AnchorPane>

@@ -3,6 +3,7 @@ package details;
 import algorithms.Algorithm;
 import date.FormatDate;
 import opencv.CvUtils;
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 
 import javax.imageio.ImageIO;
@@ -25,6 +26,7 @@ public class View extends Thread {
         try {
             Mat frame = new Mat();
             while (camera.read(frame) && window.isVisible()) {
+                frame = flip(frame);
                 algorithm.change(frame);
                 BufferedImage buffer = CvUtils.convertMatToBufferedImage(frame);
                 window.drawImage(buffer, 10, 33, null);
@@ -32,6 +34,12 @@ public class View extends Thread {
         } catch (Exception e) {
             e.fillInStackTrace();
         }
+    }
+
+    private Mat flip(Mat frame) {
+        Mat dop = new Mat();
+        Core.flip(frame, dop, 1);
+        return dop;
     }
 
     public void photo() {

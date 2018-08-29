@@ -1,5 +1,6 @@
 package sample;
 
+import algorithms.AlgorithmBlackWhite;
 import algorithms.AlgorithmLine;
 import algorithms.AlgorithmNone;
 import details.CompositeViews;
@@ -12,6 +13,10 @@ public class Controller {
 
     public void lineButton() {
         CompositeViews.getInstance().setAlgorithm(new AlgorithmLine(), "AlgorithmLine");
+    }
+
+    public void blackWhiteButton() {
+        CompositeViews.getInstance().setAlgorithm(new AlgorithmBlackWhite(), "Black While");
     }
 
     public void photoButton() {
