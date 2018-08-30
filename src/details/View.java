@@ -22,9 +22,15 @@ public class View extends Thread {
     private boolean videoStart = false;
     private boolean videoSave = true;
 
+    private int width;
+    private int height;
+
+
     View(int width, int height, String title, Algorithm algorithm, int index) {
+        this.width = width;
+        this.height = height;
         window = new Window(title, width + 20, height + 43);
-        camera = new Camera(1, width, height);
+        camera = new Camera(index, width, height);
         this.algorithm = algorithm;
     }
 
@@ -32,7 +38,7 @@ public class View extends Thread {
         try {
             Mat frame = new Mat();
             while (camera.read(frame) && window.isVisible()) {
-                // frame = flip(frame);
+                //frame = flip(frame);
                 algorithm.change(frame);
                 BufferedImage buffer = CvUtils.convertMatToBufferedImage(frame);
                 window.drawImage(buffer, 10, 33, null);
@@ -74,7 +80,7 @@ public class View extends Thread {
     public void videoStart() {
         if (videoSave) {
             writer = new VideoWriter("videos\\" + FormatDate.get("dd.MM.yyyy HH.mm.SS") + ".avi",
-                    VideoWriter.fourcc('M','J','P','G'), 20, new Size(1280, 720), true);
+                    VideoWriter.fourcc('M','J','P','G'), 60, new Size(width, height), true);
             videoSave = false;
         }
         videoStart = true;

@@ -57,7 +57,14 @@ public class Controller {
 
     public void sizeCurFrame() {
         AlgorithmCurFrame.setSize((int) size.getValue());
+        AlgorithmMalen.setSize((int) size.getValue());
     }
+
+    public void malenButtom() {
+        CompositeViews.getInstance().setAlgorithm(new AlgorithmMalen(), "Malen");
+    }
+
+
 
     public void photoButton() {
         CompositeViews.getInstance().photo();
