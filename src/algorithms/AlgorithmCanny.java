@@ -9,6 +9,10 @@ public class AlgorithmCanny implements Algorithm {
 
     @Override
     public void change(Mat frame) {
+
+        new AlgorithmBlackWhite().change(frame);
+        new AlgorithmGaussianBlur().change(frame);
+        //new AlgorithmContour().change(frame);
         Mat dop = new Mat();
         frame.copyTo(dop);
         Imgproc.Canny(dop, frame, minValue, maxValue, 3, true);

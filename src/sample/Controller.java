@@ -63,6 +63,20 @@ public class Controller {
         CompositeViews.getInstance().photo();
     }
 
+    public void videoStart() {
+        CompositeViews.getInstance().videoStart();
+    }
+
+    public void videoStop() {
+        CompositeViews.getInstance().videoStop();
+    }
+
+    public void videoSave() {
+        videoStop();
+        CompositeViews.getInstance().videoSave();
+        System.out.println("video save");
+    }
+
     public void exitButton() {
         System.exit(0);
     }

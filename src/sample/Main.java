@@ -17,9 +17,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Computer Vision");
-        primaryStage.setScene(new Scene(root, 300, 720));
-        primaryStage.setMaxWidth(500);
-        primaryStage.setMinWidth(280);
+        primaryStage.setScene(new Scene(root, 300, 1010));
+        primaryStage.setResizable(false);
         primaryStage.setX(-7);
         primaryStage.setY(0);
         primaryStage.setOnCloseRequest(event -> {

@@ -10,7 +10,7 @@
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#noneButton" prefHeight="25.0" prefWidth="156.0" text="None" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
       <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#lineButton" prefHeight="25.0" prefWidth="156.0" text="Line" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
       <Button layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="25.0" prefWidth="152.0" text="Exit" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Button layoutX="37.0" layoutY="632.0" mnemonicParsing="false" onAction="#photoButton" text="Photo" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="37.0" layoutY="632.0" mnemonicParsing="false" onAction="#photoButton" text="Photo" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Button layoutX="20.0" layoutY="101.0" mnemonicParsing="false" onAction="#blackWhiteButton" text="Black White" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
       <Button layoutX="20.0" layoutY="152.0" mnemonicParsing="false" onAction="#contourButton" text="Contour" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
       <Slider fx:id="counterSlider" layoutX="20.0" layoutY="181.0" max="255.0" min="1.0" onMouseDragged="#contourChange" value="40.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="263.0" />
@@ -26,5 +26,9 @@
       <Button layoutX="23.0" layoutY="443.0" mnemonicParsing="false" onAction="#curFrameButton" text="Cur Frame" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="420.0" />
       <Slider fx:id="size" layoutX="140.0" layoutY="464.0" max="255.0" onMouseDragged="#sizeCurFrame" value="20.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="463.0" />
       <Label layoutX="20.0" layoutY="463.0" text="Size cur frame" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="460.0" />
+      <Button layoutX="14.0" layoutY="636.0" mnemonicParsing="false" onAction="#videoStart" prefWidth="60.0" text="Start" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="160.0" />
+      <Button layoutX="131.0" layoutY="635.0" mnemonicParsing="false" onAction="#videoStop" prefWidth="60.0" text="Stop" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="90.0" />
+      <Button layoutX="228.0" layoutY="635.0" mnemonicParsing="false" onAction="#videoSave" prefWidth="60.0" text="Save" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="639.0" text="Video" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="30.0" />
    </children>
 </AnchorPane>

@@ -5,6 +5,8 @@ import date.FormatDate;
 import opencv.CvUtils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.core.Size;
+import org.opencv.videoio.VideoWriter;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -15,6 +17,10 @@ public class View extends Thread {
     private Window window;
     private Camera camera;
     private Algorithm algorithm;
+
+    private VideoWriter writer;
+    private boolean videoStart = false;
+    private boolean videoSave = true;
 
     View(int width, int height, String title, Algorithm algorithm, int index) {
         window = new Window(title, width + 20, height + 43);
@@ -30,6 +36,9 @@ public class View extends Thread {
                 algorithm.change(frame);
                 BufferedImage buffer = CvUtils.convertMatToBufferedImage(frame);
                 window.drawImage(buffer, 10, 33, null);
+                if (videoStart)
+                    writer.write(frame);
+                frame.release();
             }
         } catch (Exception e) {
             e.fillInStackTrace();
@@ -54,6 +63,7 @@ public class View extends Thread {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        frame.release();
     }
 
     public void setAlgorithm(Algorithm algorithm, String title) {
@@ -61,7 +71,21 @@ public class View extends Thread {
         window.setTitle(title);
     }
 
-    public void setVisible(boolean b) {
-        window.setVisible(b);
+    public void videoStart() {
+        if (videoSave) {
+            writer = new VideoWriter("videos\\" + FormatDate.get("dd.MM.yyyy HH.mm.SS") + ".avi",
+                    VideoWriter.fourcc('M','J','P','G'), 20, new Size(1280, 720), true);
+            videoSave = false;
+        }
+        videoStart = true;
+    }
+
+    public void videoStop() {
+        videoStart = false;
+    }
+
+    public void videoSave() {
+        videoSave = true;
+        writer.release();
     }
 }
