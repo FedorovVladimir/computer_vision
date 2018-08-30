@@ -24,7 +24,7 @@ public class View extends Thread {
 
     View(int width, int height, String title, Algorithm algorithm, int index) {
         window = new Window(title, width + 20, height + 43);
-        camera = new Camera(0, width, height);
+        camera = new Camera(1, width, height);
         this.algorithm = algorithm;
     }
 
@@ -32,7 +32,7 @@ public class View extends Thread {
         try {
             Mat frame = new Mat();
             while (camera.read(frame) && window.isVisible()) {
-                frame = flip(frame);
+                // frame = flip(frame);
                 algorithm.change(frame);
                 BufferedImage buffer = CvUtils.convertMatToBufferedImage(frame);
                 window.drawImage(buffer, 10, 33, null);
