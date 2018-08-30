@@ -9,6 +9,7 @@ public class Controller {
     public Slider gaussianBlurSlider;
     public Slider cannyMin;
     public Slider cannyMax;
+    public Slider size;
 
     public void noneButton() {
         CompositeViews.getInstance().setAlgorithm(new AlgorithmNone(), "AlgorithmNone");
@@ -48,6 +49,14 @@ public class Controller {
 
     public void maxCanny() {
         AlgorithmCanny.setMaxValue((int) cannyMax.getValue());
+    }
+
+    public void curFrameButton() {
+        CompositeViews.getInstance().setAlgorithm(new AlgorithmCurFrame(), "Contour -> Canny -> Cur Frame");
+    }
+
+    public void sizeCurFrame() {
+        AlgorithmCurFrame.setSize((int) size.getValue());
     }
 
     public void photoButton() {

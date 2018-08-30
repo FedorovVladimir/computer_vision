@@ -11,8 +11,7 @@ public class AlgorithmCanny implements Algorithm {
     public void change(Mat frame) {
         Mat dop = new Mat();
         frame.copyTo(dop);
-        Imgproc.Canny(dop, frame, minValue, maxValue);
-        System.out.println(minValue + " " + maxValue);
+        Imgproc.Canny(dop, frame, minValue, maxValue, 3, true);
     }
 
     public static void setMinValue(int minValue) {

@@ -23,5 +23,8 @@
       <Label layoutX="20.0" layoutY="352.0" text="Canny min" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
       <Label layoutX="20.0" layoutY="389.0" text="Canny max" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0" />
       <Slider fx:id="cannyMax" layoutX="125.0" layoutY="391.0" max="255.0" onMouseDragged="#maxCanny" value="20.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="383.0" />
+      <Button layoutX="23.0" layoutY="443.0" mnemonicParsing="false" onAction="#curFrameButton" text="Cur Frame" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="420.0" />
+      <Slider fx:id="size" layoutX="140.0" layoutY="464.0" max="255.0" onMouseDragged="#sizeCurFrame" value="20.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="463.0" />
+      <Label layoutX="20.0" layoutY="463.0" text="Size cur frame" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="460.0" />
    </children>
 </AnchorPane>
