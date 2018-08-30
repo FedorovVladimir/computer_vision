@@ -8,6 +8,7 @@ public class AlgorithmContour implements Algorithm {
 
     @Override
     public void change(Mat frame) {
+        new AlgorithmBlackWhite().change(frame);
         new AlgorithmGaussianBlur().change(frame);
         Mat dop = new Mat();
         frame.copyTo(dop);

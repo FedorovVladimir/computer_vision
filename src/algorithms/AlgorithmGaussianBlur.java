@@ -9,7 +9,6 @@ public class AlgorithmGaussianBlur implements Algorithm {
 
     @Override
     public void change(Mat frame) {
-        new AlgorithmBlackWhite().change(frame);
         Mat dop = new Mat();
         frame.copyTo(dop);
         Imgproc.GaussianBlur(dop, frame, new Size(size, size), 0);
