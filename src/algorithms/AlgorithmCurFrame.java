@@ -17,7 +17,6 @@ public class AlgorithmCurFrame implements Algorithm {
 
         List<MatOfPoint> contours = new ArrayList<>();
         Imgproc.findContours(dop, contours, new Mat(), Imgproc.RETR_LIST, Imgproc.CHAIN_APPROX_SIMPLE);
-        Imgproc.drawContours(frame, contours, 1, new Scalar(0,80,255), 2);
 
         for(int i = 0; i < contours.size(); i++) {
             Rect rect = Imgproc.boundingRect(contours.get(i));
@@ -26,7 +25,10 @@ public class AlgorithmCurFrame implements Algorithm {
                 Imgproc.rectangle(frame, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 0, 255), 3);
             }
         }
+
     }
+
+
 
     public static void setSize(int size) {
         AlgorithmCurFrame.size = size;
