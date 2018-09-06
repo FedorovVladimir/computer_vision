@@ -80,7 +80,7 @@ public class View extends Thread {
     public void videoStart() {
         if (videoSave) {
             writer = new VideoWriter("videos\\" + FormatDate.get("dd.MM.yyyy HH.mm.SS") + ".avi",
-                    VideoWriter.fourcc('M','J','P','G'), 60, new Size(width, height), true);
+                    VideoWriter.fourcc('M','J','P','G'), 20, new Size(width, height), true);
             videoSave = false;
         }
         videoStart = true;
